@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload file</title>
+</head>
+<body>
+    <input type = "file" id = "files">
+    <button id = "load" onclick = "load()">upload</button>
+    <div id = "result"></div>
+
+    <script>
+        function load() {
+            var files = document.getElementById("files").files[0];
+            var formData = new FormData();
+            formData.append("myFile", files);
+            var xml = new XMLHttpRequest();
+            xml.open("POST", "index.html", true);
+            xml.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("result").innerHTML = "upload successful";
+                };
+            };
+
+            xml.send(formData);
+        }
+    </script>
+</body>
+</html>

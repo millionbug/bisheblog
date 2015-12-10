@@ -10,7 +10,4 @@ hand["/start"] = requestHander.start;
 hand["/upload"] = requestHander.upload;
 hand["/show"] = requestHander.show;
 
-function create(){
     node.start(route.route,hand);
-}
-exports.create = create;
