@@ -1,0 +1,29 @@
+p {
+  @if 1 + 1 == 2{ border: 1px solid; }
+  @if 5 < 3{
+    border: 2px dotted;
+  }@else{
+    border: 4px dotted;
+  }
+  @for $i from 1 to 5{
+    .border-#{$i}{
+      border:#{$i}px solid red;
+    }
+  }
+  $m:5;
+  @while $m > 1 {
+    .item-#{$m}{
+        width:2px*$m;
+    }
+  $m : $m - 1;
+  }
+  @each $item in a,b,c{
+    background-image: url("#{$item}.jpg");
+  }
+  @function double($n){
+    @return $n*2;
+  }
+  div{
+    width:double(100px);
+  }
+}

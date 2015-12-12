@@ -1,0 +1,62 @@
+$blue : #c0c0c0;
+div{
+	color:$blue
+}
+
+$side : left;
+div{
+	border-#{$side}-radius:5px;
+}
+//代码可以计算
+$var : 100px;
+body{
+	margin:(14px/2);
+	right:$var*10;
+}
+//border-color
+div{
+	border:{
+		color:red;
+	}
+}
+//a:hover
+a{
+	&:hover{color:red}
+}
+//extend
+.class1{
+	border:1px solid #ddd;
+	width:123px;
+}
+.class2{
+	@extend .class1;
+	height:111px;
+	margin-left:111px;
+}
+
+//Mixin
+@mixin ct{
+	float:left;
+	padding:0px;
+	font-size:1.2em;
+}
+div{
+	@include ct;
+	color:red;
+	margin-top:20px;
+}
+
+//Mixin (value)
+@mixin ct($value:10px){
+	float:left;
+	padding-left:$value;
+}
+div{
+	@include ct(200px);
+}
+
+
+
+
+
+

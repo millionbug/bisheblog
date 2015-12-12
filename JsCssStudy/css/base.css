@@ -1,0 +1,36 @@
+div {
+  color: #c0c0c0; }
+
+div {
+  border-left-radius: 5px; }
+
+body {
+  margin: 7px;
+  right: 1000px; }
+
+div {
+  border-color: red; }
+
+a:hover {
+  color: red; }
+
+.class1, .class2 {
+  border: 1px solid #ddd;
+  width: 123px; }
+
+.class2 {
+  height: 111px;
+  margin-left: 111px; }
+
+div {
+  float: left;
+  padding: 0px;
+  font-size: 1.2em;
+  color: red;
+  margin-top: 20px; }
+
+div {
+  float: left;
+  padding-left: 200px; }
+
+/*# sourceMappingURL=base.css.map */
