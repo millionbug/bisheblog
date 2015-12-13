@@ -1,0 +1,4 @@
+{
+  "name":"MillerBlog",
+  "main":"./lib/index.js"
+}

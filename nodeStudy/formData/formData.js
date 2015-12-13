@@ -8,7 +8,7 @@ app.get("/",function(req,res){
    res.sendFile(__dirname+"/FromData.html");
 });
 
-app.get("/index.html",function(res,rep){
+app.get("/test.html",function(res,rep){
    var file = res.files.myfile;
     console.log(res)
     console.log(file)
