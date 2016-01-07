@@ -1,0 +1,48 @@
+html {
+  height: 100%; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+.content {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.content h2 {
+  font-size: 28px; }
+
+.index {
+  color: blue; }
+
+.year {
+  font-size: 1.7em;
+  color: #000; }
+
+hr {
+  border: 1px dashed #c0c0c0; }
+
+.article {
+  font-size: 0.6em;
+  line-height: 15px;
+  color: burlywood;
+  font-weight: normal;
+  margin-left: 20px; }
+
+.rect {
+  width: 10px;
+  height: 10px;
+  background: burlywood;
+  float: left;
+  margin-top: 13px; }
+
+.foot {
+  height: 180px; }
+
+/*# sourceMappingURL=blog.css.map */

@@ -10,6 +10,15 @@ app.get('/',function(request,response){
 app.get("/aboutMe",function(request,response){
     response.sendFile(__dirname+"/html/aboutMe.html");
 });
+app.get("/about",function(request,response){
+    response.sendFile(__dirname+"/html/about.html");
+});
+app.get("/blog",function(request,response){
+    response.sendFile(__dirname+"/html/blogAll.html");
+});
+app.get("/blogDetail",function(request,response){
+    response.sendFile(__dirname+"/html/blogDetail.html");
+});
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 
