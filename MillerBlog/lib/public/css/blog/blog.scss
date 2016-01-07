@@ -30,7 +30,7 @@ hr{
 }
 .article{
   font-size:0.6em;
-  line-height: 15px;
+  line-height: 10px;
   color:burlywood;
   font-weight:normal;
   margin-left:20px;
@@ -38,10 +38,13 @@ hr{
 .rect{
   width:10px;
   height:10px;
-  background: burlywood;
+  background:burlywood;
   float: left;
   margin-top:13px;
 }
 .foot{
   height:180px;
+}
+h5{
+  margin-top:-10px;
 }

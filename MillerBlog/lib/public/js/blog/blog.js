@@ -29,10 +29,10 @@ $(function(){
                     for(var i = 0,len1 = rows.length;i<len1;i++){
                         for(var j= 0,len2 = yearTotal.length;j<len2;j++){
                             if(rows[i].year == yearTotal[j]){
-                                var html = "<h4>";
+                                var html = "<h5>";
                                 html += "<p class ='rect'></p>";
                                 html += "<a href = '/blogDetail#"+rows[i].id+"' class = 'article'>"+rows[i].name+"</a>";
-                                html += "</h4>";
+                                html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
                         }
