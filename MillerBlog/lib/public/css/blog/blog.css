@@ -22,23 +22,23 @@ a {
   color: blue; }
 
 .year {
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #000; }
 
 hr {
   border: 1px dashed #c0c0c0; }
 
 .article {
-  font-size: 0.7em;
+  font-size: 0.6em;
   line-height: 10px;
-  color: burlywood;
+  color: rosybrown;
   font-weight: normal;
   margin-left: 20px; }
 
 .rect {
-  width: 7px;
-  height: 7px;
-  background: burlywood;
+  width: 8px;
+  height: 8px;
+  background: rosybrown;
   float: left;
   margin-top: 11px; }
 
@@ -46,8 +46,6 @@ hr {
   height: 180px; }
 
 h5 {
-  height:10px;
-  margin-top:-2px;
-}
+  margin-top: -10px; }
 
 /*# sourceMappingURL=blog.css.map */
