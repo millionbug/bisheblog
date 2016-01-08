@@ -15,11 +15,11 @@ a {
   margin: 0 auto;
   padding-top: 20px; }
 
-.title h2 {
-  font-size: 28px; }
+h2 {
+  font-size: 1.7em; }
 
 .index {
-  color: blue; }
+  color: #4a75b5; }
 
 .about {
   font-size: 1.2em; }
