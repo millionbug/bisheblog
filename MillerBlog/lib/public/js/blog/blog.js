@@ -32,6 +32,7 @@ $(function(){
                                 var html = "<h5>";
                                 html += "<p class ='rect'></p>";
                                 html += "<a href = '/blogDetail#"+rows[i].id+"' class = 'article'>"+rows[i].articleName+"</a>";
+                                html += "<span class = 'article'>("+rows[i].date+","+rows[i].+")</span>"
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }

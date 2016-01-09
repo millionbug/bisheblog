@@ -9,10 +9,11 @@ client.query("use blog");
 
 //createArticle();
 for(var i = 0;i<10;i++){
-//    AddData();
+ //   AddData();
 }
+AddData();
 //removeData();
-//showData();
+showData("Article");
 //创建Article
 function createArticle() {
     var query = "CREATE TABLE Article(";
@@ -29,7 +30,7 @@ function createArticle() {
 }
 function AddData(){
     var query = "insert into Article(articleName,year,date,content,categoryId)";
-        query += "values('数据库连接',2015,'2012-12-6','jkhrgkljwrlgwkrgelk',12)";
+        query += "values('数据库连接',2017,'2012-12-6','啊就回复就看我和反而我额和疯狂我额回复和我额开发和就',9)";
     client.query(query);
 }
 function removeData(){
@@ -47,21 +48,3 @@ function showData(table){
     });
 }
 
-//createCategory();
-for(var i = 1;i<5;i++){
- //   addCategory("分类"+i);
-}
-//showData("Category");
-//创建分类
-function createCategory(){
-    var query = "create table Category(";
-        query += "categoryId int(11) NOT NULL AUTO_INCREMENT,";
-        query += "categoryName varchar(30) DEFAULT NULL,";
-        query += "PRIMARY KEY (categoryId)";
-        query += ") ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;";
-    client.query(query);
-}
-function addCategory(name){
-    var query = "insert into Category(categoryName) values('"+name+"')";
-    client.query(query);
-}
