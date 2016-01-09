@@ -16,7 +16,7 @@ Mysql.prototype = {
     },
     connectMysql:function(target){
         var def = this.Q.defer();
-        this.client.query("use ceshi",function(err,results){
+        this.client.query("use blog",function(err,results){
             if(err){
                 def.reject(err);
             }else{

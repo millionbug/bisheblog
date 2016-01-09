@@ -3,7 +3,7 @@ $(function(){
 
     function init(){
         $.getJSON(
-            "js/main/txt.json",
+            "/Query",
             function (data) {
                 var rows = data.result;
                 var yearTotal = setYear();
@@ -31,7 +31,7 @@ $(function(){
                             if(rows[i].year == yearTotal[j]){
                                 var html = "<h5>";
                                 html += "<p class ='rect'></p>";
-                                html += "<a href = '/blogDetail#"+rows[i].id+"' class = 'article'>"+rows[i].name+"</a>";
+                                html += "<a href = '/blogDetail#"+rows[i].id+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }

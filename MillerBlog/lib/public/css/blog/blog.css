@@ -29,11 +29,11 @@ hr {
   border: 1px dashed #c0c0c0; }
 
 .article {
-  font-size: 0.6em;
+  font-size: 0.67em;
   line-height: 10px;
   color: rosybrown;
   font-weight: normal;
-  margin-left: 20px; }
+  margin-left: 11px; }
 
 .rect {
   width: 8px;
@@ -46,6 +46,8 @@ hr {
   height: 180px; }
 
 h5 {
-  margin-top: -10px; }
+  margin-left:60px;
+  margin-bottom: 18px;
+  margin-top: 0px; }
 
 /*# sourceMappingURL=blog.css.map */
