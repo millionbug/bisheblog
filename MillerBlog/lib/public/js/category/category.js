@@ -1,13 +1,20 @@
 $(function(){
+
     init();
-    AddCategory();
     function init(){
+        var cateId = location.hash.substring(1);
         $.getJSON(
-            "/Query",
+            "/QueryCategory",
+            {
+                categoryId:cateId
+            },
             function (data) {
                 if(!data.result)
                     return;
                 var rows = data.result;
+                $(".Cate_cate").html(rows[0].categoryName);
+                $(document).attr("title","Category:"+rows[0].categoryName);
+                console.log(rows)
                 var yearTotal = setYear();
                 setMain();
 
@@ -49,21 +56,4 @@ $(function(){
         )
     }
 
-    function AddCategory(){
-        $.getJSON(
-            "/Category",
-            function(data){
-                if(!data.result)
-                    return;
-                var rows = data.result;
-                console.log(data.total)
-                var html  = "<ul>";
-                for(var i = 0,len = rows.length;i<len;i++){
-                        html += "<li><a href = '/CategoryDetail#" + rows[i].categoryId + "'>" + rows[i].categoryName + "</a></li>";
-                }
-                html+="</ul>";
-                $(".blog_category").append(html);
-            }
-        )
-    }
 });

@@ -1,0 +1,68 @@
+html{
+  height:100%;
+}
+body{
+  padding:0px;
+  margin:0px;
+  height:100%;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    color:burlywood;
+  }
+}
+.content{
+  width:50%;
+  height:100%;
+  margin:0 auto;
+  padding-top:20px;
+}
+.content h2{
+  font-size: 1.5em;
+}
+
+.index {
+  color: #4a75b5; }
+
+.yearContent{
+  margin-top:40px;
+}
+
+.year{
+  font-size:1.7em;
+  color:#000;
+}
+hr{
+    border:1px dashed #c0c0c0;
+}
+.article{
+  font-size:0.75em;
+  color:rosybrown;
+  font-weight:normal;
+  margin-left:15px;
+}
+.rect{
+  width:8px;
+  height:8px;
+  background:rosybrown;
+  float: left;
+  margin-top:10px;
+}
+.foot{
+  height:180px;
+}
+h5{
+  height:5px;
+  margin-left:60px;
+  margin-top:0px;
+}
+.category{
+  padding:2px;
+  margin-left:4px;
+  font-size:0.5em;
+  font-weight:normal;
+  color:red;
+  border:1px solid red;
+  border-radius:4px;
+}

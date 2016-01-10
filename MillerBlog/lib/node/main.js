@@ -19,9 +19,13 @@ app.get("/blog",function(request,response){
 app.get("/blogDetail",function(request,response){
     response.sendFile(__dirname+"/html/blogDetail.html");
 });
+app.get("/CategoryDetail",function(request,response){
+    response.sendFile(__dirname+"/html/CategoryDetail.html");
+});
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
+app.get("/QueryCategory",Router.QueryCategory);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

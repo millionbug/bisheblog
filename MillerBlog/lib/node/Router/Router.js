@@ -30,3 +30,14 @@ exports.Update = function(request,response){
     });
     mysql.Update();
 };
+exports.QueryCategory = function(request,response){
+    var param = request.query;
+    var query = "select * from Article,Category where Article.categoryId=Category.categoryId and Category.categoryId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["articleId","articleName","year","date","content","category","categoryName"],
+        param:[param.categoryId]
+    });
+    mysql.Query();
+};
