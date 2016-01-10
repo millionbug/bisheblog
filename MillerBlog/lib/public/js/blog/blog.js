@@ -57,7 +57,7 @@ $(function(){
                 var rows = data.result;
                 var html  = "<ul>";
                 for(var i = 0,len = rows.length;i<len;i++){
-                    html += "<li><a href = '#'>"+rows[i].categoryName+"</a></li>";
+                    html += "<li><a href = '/CategoryDetail#"+rows[i].categoryId+"'>"+rows[i].categoryName+"</a></li>";
                 }
                 html+="</ul>";
                 $(".blog_category").append(html);

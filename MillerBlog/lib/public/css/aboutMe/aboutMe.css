@@ -8,6 +8,10 @@ body {
 
 a {
   text-decoration: none; }
+  a:link {
+    color: #4a75b5; }
+  a:hover {
+    color: burlywood; }
 
 .content {
   width: 50%;

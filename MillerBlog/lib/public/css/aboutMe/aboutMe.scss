@@ -8,6 +8,12 @@ body{
 }
 a{
   text-decoration: none;
+  &:link{
+    color:#4a75b5;
+  }
+  &:hover{
+    color:burlywood;
+  }
 }
 .content{
   width:50%;
