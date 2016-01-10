@@ -1,11 +1,11 @@
 var Mysql = require("../Mysql/Mysql");
 
 exports.Query = function(request,response){
-    var query = "select * from Article";
+    var query = "select * from Article,Category where Article.categoryId=Category.categoryId";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleId","articleName","year","date","content","category"],
+        config:["articleId","articleName","year","date","content","category","categoryName"],
     });
     mysql.Query();
 };

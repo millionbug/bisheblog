@@ -35,7 +35,8 @@ $(function(){
                                 var html = "<h5>";
                                 html += "<p class ='rect'></p>";
                                 html += "<a href = '/blogDetail#"+rows[i].id+"' class = 'article'>"+rows[i].articleName+"</a>";
-                                html += "<span class = 'category'></span>"
+                                html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
+                                html += "<span class = 'category'>8条评论</span>"
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
@@ -62,6 +63,11 @@ $(function(){
                 html+="</ul>";
                 $(".blog_category").append(html);
             }
+        )
+    }
+    function setCategory(){
+        $.getJSON(
+            ""
         )
     }
 });
