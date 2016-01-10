@@ -5,7 +5,17 @@ exports.Query = function(request,response){
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["id","articleName","year","date","content","category"],
+        config:["articleId","articleName","year","date","content","category"],
+    });
+    mysql.Query();
+};
+
+exports.Category = function(request,response){
+    var query = "select * from Category";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["categoryId","categoryName"]
     });
     mysql.Query();
 };

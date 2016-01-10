@@ -21,6 +21,7 @@ app.get("/blogDetail",function(request,response){
 });
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
+app.get("/Category",Router.Category);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;
