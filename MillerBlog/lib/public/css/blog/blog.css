@@ -8,8 +8,6 @@ body {
 
 a {
   text-decoration: none; }
-  a:link {
-    color: #4a75b5; }
   a:hover {
     color: burlywood; }
 
@@ -46,7 +44,12 @@ ul {
 li {
   float: left;
   margin-left: 20px; }
-
+li a:link{
+  color:#4a75b5;
+}
+li a:hover{
+  color:burlywood;
+}
 .year {
   font-size: 1.7em;
   color: #000; }
