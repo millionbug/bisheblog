@@ -1,0 +1,44 @@
+html {
+  height: 100%; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: #4a75b5; }
+  a:hover {
+    color: burlywood; }
+
+.content {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.title h2 {
+  font-size: 28px; }
+
+.index {
+  color: #4a75b5; }
+
+.about {
+  font-size: 1.2em; }
+
+hr {
+  border: 1px dashed #c0c0c0; }
+
+.program {
+  font-size: 0.9em;
+  color: rosybrown; }
+  .program img {
+    position: relative;
+    left: 210px; }
+
+.foot {
+  height: 180px; }
+
+/*# sourceMappingURL=message.css.map */

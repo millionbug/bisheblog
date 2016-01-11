@@ -68,7 +68,7 @@ hr {
   line-height: 10px;
   color: rosybrown;
   font-weight: normal;
-  margin-left: 15px; }
+  margin-left: 5px; }
 
 .rect {
   width: 8px;
@@ -93,5 +93,16 @@ h5 {
   padding:2px;
   color:red;
   border-radius: 4px;
+}
+.articleTime{
+  color: #c0c0c0;
+  font-size:0.7em;
+  margin-left:8px;
+  font-weight:normal;
+}
+.articleHao{
+  color:#c0c0c0;
+  font-size:1em;
+  margin-left:4px;
 }
 /*# sourceMappingURL=blog.css.map */

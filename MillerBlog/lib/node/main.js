@@ -22,6 +22,9 @@ app.get("/blogDetail",function(request,response){
 app.get("/CategoryDetail",function(request,response){
     response.sendFile(__dirname+"/html/CategoryDetail.html");
 });
+app.get("/message",function(request,response){
+    response.sendFile(__dirname+"/html/message.html");
+});
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);

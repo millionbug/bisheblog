@@ -41,6 +41,8 @@ $(function(){
                             if(rows[i].year == yearTotal[j]){
                                 var html = "<h5>";
                                 html += "<p class ='rect'></p>";
+                                html += "<span class = 'articleTime'>"+rows[i].date+"</span>";
+                                html += "<span class = 'articleHao'>»</span>"
                                 html += "<a href = '/blogDetail#"+rows[i].articleId+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
                                 html += "<span class = 'category'>8条评论</span>"
