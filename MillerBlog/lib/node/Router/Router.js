@@ -42,3 +42,27 @@ exports.QueryCategory = function(request,response){
     });
     mysql.Query();
 };
+//查询留言
+exports.QueryMessage = function(request,response){
+    var query = "select * from Message";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["userName","image","content","date"],
+    });
+    mysql.Query();
+};
+//提交留言
+exports.Message = function(request,response){
+    var date = new Date();
+    var query = request.query;
+    console.log(query);
+    console.log(date.getFullYear());
+    var query = "select * from Message";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[]
+    });
+    mysql.Add();
+};

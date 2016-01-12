@@ -29,6 +29,8 @@ app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
 app.get("/QueryCategory",Router.QueryCategory);
+app.get("/QueryMessage",Router.QueryMessage);
+app.get("/Message",Router.Message);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

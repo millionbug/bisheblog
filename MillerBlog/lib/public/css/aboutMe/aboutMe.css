@@ -14,7 +14,7 @@ a {
     color: burlywood; }
 
 .content {
-  width: 50%;
+  width: 65%;
   height: 100%;
   margin: 0 auto;
   padding-top: 20px; }
@@ -36,7 +36,7 @@ hr {
   color: rosybrown; }
   .program img {
     position: relative;
-    left: 210px; }
+    left: 0px; }
 
 .foot {
   height: 180px; }
