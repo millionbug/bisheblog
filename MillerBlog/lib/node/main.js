@@ -31,6 +31,7 @@ app.get("/Category",Router.Category);
 app.get("/QueryCategory",Router.QueryCategory);
 app.get("/QueryMessage",Router.QueryMessage);
 app.get("/SubmitMessage",Router.SubmitMessage);
+app.get("/ArticleContent",Router.ArticleContent);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

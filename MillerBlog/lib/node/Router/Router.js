@@ -66,3 +66,15 @@ exports.SubmitMessage = function(request,response){
     });
     mysql.Add();
 };
+//提交留言
+exports.ArticleContent = function(request,response){
+    var param = request.query;
+    var query = "select articleName,date,content,categoryName from Article,Category where Article.categoryId = Category.categoryId and articleId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["articleName","date","content","categoryName"],
+        param:[param.articleId],
+    });
+    mysql.Query();
+};
