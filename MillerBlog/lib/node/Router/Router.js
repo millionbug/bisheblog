@@ -53,16 +53,16 @@ exports.QueryMessage = function(request,response){
     mysql.Query();
 };
 //提交留言
-exports.Message = function(request,response){
+exports.SubmitMessage = function(request,response){
     var date = new Date();
-    var query = request.query;
-    console.log(query);
-    console.log(date.getFullYear());
-    var query = "select * from Message";
+    var param = request.query;
+    var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+
+    var query = "insert into Message(userName,image,content,date) values(?,?,?,?)";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        param:[]
+        param:[param.userName,"/img/12.jpg",param.messageContent,time],
     });
     mysql.Add();
 };
