@@ -18,7 +18,9 @@ $(function(){
 
                 $(rows.content).appendTo($(".article_content"));
             }
-
         )
+    }
+    function initMessage(){
+
     }
 });

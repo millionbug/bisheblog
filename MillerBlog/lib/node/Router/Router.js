@@ -44,7 +44,7 @@ exports.QueryCategory = function(request,response){
 };
 //查询留言
 exports.QueryMessage = function(request,response){
-    var query = "select * from Message";
+    var query = "select userName,image,content,DATE_FORMAT(date,'%Y-%m-%d %H:%i:%s') As date from Message";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
@@ -56,7 +56,7 @@ exports.QueryMessage = function(request,response){
 exports.SubmitMessage = function(request,response){
     var date = new Date();
     var param = request.query;
-    var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+    var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
 
     var query = "insert into Message(userName,image,content,date) values(?,?,?,?)";
     var mysql = new Mysql.createMysql({
