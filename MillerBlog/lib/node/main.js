@@ -26,6 +26,10 @@ app.get("/message",function(request,response){
     response.sendFile(__dirname+"/html/message.html");
 });
 
+//博客地址
+app.get("/create_blog",function(request,response){
+    response.sendFile(__dirname+"/blog/create_blog.html");
+});
 
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);

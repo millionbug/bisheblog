@@ -36,7 +36,7 @@ $(function(){
                                 html += "<p class ='rect'></p>";
                                 html += "<span class = 'articleTime'>"+rows[i].date+"</span>";
                                 html += "<span class = 'articleHao'>»</span>"
-                                html += "<a href = '/blogDetail#"+rows[i].articleId+"' class = 'article'>"+rows[i].articleName+"</a>";
+                                html += "<a href = '"+rows[i].address+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
                                 html += "<span class = 'category'>8条评论</span>"
                                 html += "</h5>";

@@ -22,7 +22,7 @@ a {
       border-radius: 100%; }
     .content .miller {
       margin-left: 30px; }
-    .content p {
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p {
       margin-left: 30px; }
     .content .ps_relative {
       position: relative;
@@ -44,7 +44,7 @@ a {
       border-radius: 100%; }
     .content .miller {
       margin-left: 150px; }
-    .content p {
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p {
       margin-left: 150px; }
     .content .ps_relative {
       position: relative;
