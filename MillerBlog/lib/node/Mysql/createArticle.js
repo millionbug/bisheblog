@@ -7,9 +7,9 @@ client.connect();
 client.query("use blog");
 //client.query("drop table Article");
 
-//createArticle();
+createArticle();
 for(var i = 0;i<10;i++){
- //   AddData();
+    AddData();
 }
 AddData();
 //removeData();

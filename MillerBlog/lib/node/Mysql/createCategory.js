@@ -6,9 +6,9 @@ var client = mysql.createConnection({
 client.connect();
 client.query("use blog");
 
-createCategory();
+//createCategory();
 for(var i = 1;i<5;i++){
-    addCategory("分类"+i);
+    addCategory("linux"+i);
 }
 showData("Category");
 
