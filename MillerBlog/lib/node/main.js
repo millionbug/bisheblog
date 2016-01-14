@@ -28,7 +28,7 @@ app.get("/message",function(request,response){
 
 //博客地址
 app.get("/create_blog",function(request,response){
-    response.sendFile(__dirname+"/blog/create_blog.html");
+    response.sendFile(__dirname+"/blog/2015Summary.html");
 });
 
 app.get("/Query",Router.Query);
