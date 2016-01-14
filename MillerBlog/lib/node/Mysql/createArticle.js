@@ -5,14 +5,11 @@ var client = mysql.createConnection({
 });
 client.connect();
 client.query("use blog");
-//client.query("drop table Article");
+client.query("drop table Article");
 
 createArticle();
-for(var i = 0;i<10;i++){
-    AddData();
-}
-AddData();
 //removeData();
+AddData();
 showData("Article");
 //创建Article
 function createArticle() {
@@ -21,7 +18,7 @@ function createArticle() {
     query += "articleName varchar(30) DEFAULT NULL,";
     query += "year int(8) DEFAULT NULL,";
     query += "date varchar(20) DEFAULT NULL,";
-    query += "content text DEFAULT NULL,";
+    query += "address varchar(20) NOT NULL,";
     query += "categoryId int(11) DEFAULT NULL,";
     query += "PRIMARY KEY (articleId),";
     query += "foreign key(categoryId) references Category(categoryId)";
@@ -29,8 +26,8 @@ function createArticle() {
     client.query(query);
 }
 function AddData(){
-    var query = "insert into Article(articleName,year,date,content,categoryId)";
-        query += "values('数据库连接',2017,'2012-12-6','啊就回复就看我和反而我额和疯狂我额回复和我额开发和就',9)";
+    var query = "insert into Article(articleName,year,date,address,categoryId)";
+        query += "values('2015总结',2016,'2016-1-14','/create_blog',12)";
     client.query(query);
 }
 function removeData(){
@@ -47,4 +44,3 @@ function showData(table){
         }
     });
 }
-

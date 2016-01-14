@@ -5,7 +5,7 @@ exports.Query = function(request,response){
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleId","articleName","year","date","content","category","categoryName"],
+        config:["articleId","articleName","year","date","address","category","categoryName"],
     });
     mysql.Query();
 };
@@ -44,7 +44,7 @@ exports.QueryCategory = function(request,response){
 };
 //查询留言
 exports.QueryMessage = function(request,response){
-    var query = "select userName,image,content,DATE_FORMAT(date,'%Y-%m-%d %H:%i:%s') As date from Message";
+    var query = "select userName,image,content,DATE_FORMAT(date,'%Y年%m月%d日 %H:%i:%s') As date from Message";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
@@ -66,10 +66,10 @@ exports.SubmitMessage = function(request,response){
     });
     mysql.Add();
 };
-//提交留言
+//
 exports.ArticleContent = function(request,response){
     var param = request.query;
-    var query = "select articleName,date,content,categoryName from Article,Category where Article.categoryId = Category.categoryId and articleId=?";
+    var query = "select articleName,date,address,categoryName from Article,Category where Article.categoryId = Category.categoryId and articleId=?";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
