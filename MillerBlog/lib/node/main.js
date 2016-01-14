@@ -38,6 +38,8 @@ app.get("/QueryCategory",Router.QueryCategory);
 app.get("/QueryMessage",Router.QueryMessage);
 app.get("/SubmitMessage",Router.SubmitMessage);
 app.get("/ArticleContent",Router.ArticleContent);
+app.get("/QueryComment",Router.QueryComment);
+app.get("/SubmitComment",Router.SubmitComment);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

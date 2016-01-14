@@ -37,7 +37,7 @@ exports.QueryCategory = function(request,response){
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleId","articleName","year","date","content","category","categoryName"],
+        config:["articleId","articleName","year","date","address","category","categoryName"],
         param:[param.categoryId]
     });
     mysql.Query();
@@ -77,4 +77,32 @@ exports.ArticleContent = function(request,response){
         param:[param.articleId],
     });
     mysql.Query();
+};
+
+//根据articleId查询评论
+exports.QueryComment = function(request,response){
+    var param = request.query;
+    console.log(param.articleId)
+    var query = "select userName,image,content,DATE_FORMAT(date,'%Y年%m月%d日 %H:%i:%s') As date from Comment where articleId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["userName","image","content","date"],
+        param:[param.articleId]
+    });
+    mysql.Query();
+};
+//提交留言
+exports.SubmitComment = function(request,response){
+    var date = new Date();
+    var param = request.query;
+    var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+
+    var query = "insert into Comment(userName,image,content,date,articleId) values(?,?,?,?,?)";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.userName,"/img/12.jpg",param.messageContent,time,param.articleId],
+    });
+    mysql.Add();
 };
