@@ -6,9 +6,9 @@ var client = mysql.createConnection({
 client.connect();
 
 client.query("use blog");
-client.query("drop table Message");
+//client.query("drop table Message");
 
-createMessage();
+//createMessage();
 //client.query("truncate table Message");
 //for(var i = 0;i<7;i++) {
     addData();

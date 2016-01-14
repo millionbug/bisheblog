@@ -7,9 +7,9 @@ client.connect();
 client.query("use blog");
 
 //createCategory();
-for(var i = 1;i<5;i++){
-    addCategory("linux"+i);
-}
+//for(var i = 1;i<5;i++){
+    addCategory("Thoughts Of Life");
+//}
 showData("Category");
 
 function removeData(){

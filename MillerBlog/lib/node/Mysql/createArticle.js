@@ -5,9 +5,9 @@ var client = mysql.createConnection({
 });
 client.connect();
 client.query("use blog");
-client.query("drop table Article");
+//client.query("drop table Article");
 
-createArticle();
+//createArticle();
 //removeData();
 AddData();
 showData("Article");
