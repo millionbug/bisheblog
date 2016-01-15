@@ -46,7 +46,7 @@ $(function(){
                                 html += "<span class = 'articleHao'>»</span>"
                                 html += "<a href = '"+rows[i].address+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
-                                html += "<span class = 'category' id='EveComment'>暂无评论</span>";
+                                html += "<span class = 'category' id='EveComment'>0条评论</span>";
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
