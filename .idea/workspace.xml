@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/blog/blog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -78,8 +78,8 @@
       <file leaf-file-name="category.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41968912">
-              <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.23316061">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -884,12 +884,12 @@
       <workItem from="1452582335637" duration="16249000" />
       <workItem from="1452661133758" duration="1581000" />
       <workItem from="1452751741978" duration="20279000" />
-      <workItem from="1452835730315" duration="18430000" />
+      <workItem from="1452835730315" duration="18866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221761000" />
+    <option name="totallyTimeSpent" value="222197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1274,15 +1274,15 @@
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/blog/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41968912">
-          <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.23316061">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,9 @@
 $(function(){
 
     init();
-    AddComment();
+    setTimeout(function(){
+        AddComment();
+    },50);
     function init(){
         var cateId = location.hash.substring(1);
         $.getJSON(
@@ -46,7 +48,7 @@ $(function(){
                                 html += "<span class = 'articleHao'>»</span>"
                                 html += "<a href = '"+rows[i].address+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
-                                html += "<span class = 'category' id='EveComment'>0条评论</span>";
+                                html += "<span class = 'category' id='EveComment'><span>0</span>条评论</span>";
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
@@ -68,7 +70,7 @@ $(function(){
                 var rows = data.result,
                     total = data.total;
                 for(var i = 0;i<total;i++){
-                    $("#"+rows[i].articleId).find("#EveComment").html(rows[i].total+"条数据")
+                    $("#"+rows[i].articleId).find("#EveComment span").html(rows[i].total);
                 }
             }
 
