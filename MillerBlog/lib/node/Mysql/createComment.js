@@ -8,10 +8,10 @@ client.connect();
 client.query("use blog");
 //client.query("drop table Comment");
 
-createMessage();
+//createMessage();
 //client.query("truncate table Comment");
 //for(var i = 0;i<7;i++) {
-    addData();
+  //  addData();
 //}
 showData();
 function createMessage(){
@@ -35,8 +35,14 @@ function addData(){
     client.query(query);
 }
 function showData(){
-    var query = "select * from Comment";
+    var query = "select articleName,year,Article.date,address,categoryName,count(commentId) As total " +
+        "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
+        "and Article.articleId = Comment.articleId;"
+
+  //  var query = "select articleName,count(commentId) As total from Article,Comment where Article.articleId = Comment.articleId and Comment.articleId=6";
     client.query(query,function(err,result){
+        if(err)
+            console.log(err);
         console.log(result)
     });
 }

@@ -1,11 +1,14 @@
 var Mysql = require("../Mysql/Mysql");
 //查询文章列表
 exports.Query = function(request,response){
-    var query = "select * from Article,Category where Article.categoryId=Category.categoryId";
+    var query = "select articleName,year,Article.date,address,categoryName,count(commentId) As total " +
+        "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
+        "and Article.articleId = Comment.articleId";
+
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleId","articleName","year","date","address","category","categoryName"],
+        config:["articleName","year","date","address","total","categoryName"],
     });
     mysql.Query();
 };

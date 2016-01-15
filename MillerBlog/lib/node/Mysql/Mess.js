@@ -5,13 +5,13 @@ var client = mysql.createConnection({
 });
 client.connect();
 
-client.query("use blog");
-client.query("drop table Mess");
-createMessage();
-for(var i = 0;i<3;i++) {
-    addData();
-}
-addData();
+//client.query("use blog");
+//client.query("drop table Mess");
+//createMessage();
+//for(var i = 0;i<3;i++) {
+  //  addData();
+//}
+//addData();
 showData();
 function createMessage(){
     var query = "create table Mess(";
@@ -30,9 +30,8 @@ function addData(){
     client.query(query);
 }
 function showData(){
-    var query = "select * from Mess";
+    var query = "select * from ";
     client.query(query,function(err,result){
         console.log(result)
     });
 }
-client.query("select ")

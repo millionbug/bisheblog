@@ -8,6 +8,7 @@ $(function(){
                 if(!data.result)
                     return;
                 var rows = data.result;
+                console.log(rows[0])
                 var yearTotal = setYear();
                 setMain();
 
@@ -24,7 +25,7 @@ $(function(){
                         html += "</div>";
 
                     }
-                    html+="</div>"
+                    html+="</div>";
                     $(".main").append(html);
                     return yearTotal;
                 }
@@ -38,7 +39,7 @@ $(function(){
                                 html += "<span class = 'articleHao'>»</span>"
                                 html += "<a href = '"+rows[i].address+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
-                                html += "<span class = 'category'>8条评论</span>"
+                                html += "<span class = 'category'>"+rows[i].total+"条评论</span>"
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
