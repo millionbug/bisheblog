@@ -42,6 +42,10 @@ a{
         right:8%;
       }
     }
+
+  }
+  .nav{
+    display: none;
   }
   #userName{
     width:75%;
@@ -76,6 +80,35 @@ a{
         position:absolute;
         right:18%;
       }
+    }
+  }
+  .nav{
+    position: fixed;
+    top:50px;
+    right:64px;
+    height:200px;
+    .rect{
+      width:20px;
+      height:20px;
+      background: #4a75b5;
+      margin-left:48px;
+      margin-top:10px;
+      border-radius: 100%;
+    }
+    ul{
+      padding-top:20px;
+      width:80px;
+      height:230px;
+      border:1px solid #c0c0c0;
+      margin-top:30px;
+      list-style-type: none;
+    }
+    li{
+      font-weight:bold;
+      line-height:45px;
+      text-align:center;
+      font-size:1.2em;
+      margin-left:-40px;
     }
   }
   #userName{
