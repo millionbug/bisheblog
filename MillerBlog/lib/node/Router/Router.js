@@ -1,14 +1,11 @@
 var Mysql = require("../Mysql/Mysql");
 //查询文章列表
 exports.Query = function(request,response){
-    var query = "select articleName,year,Article.date,address,categoryName,count(commentId) As total " +
-        "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
-        "and Article.articleId = Comment.articleId";
-
+    var query = "select * from Article,Category where Article.categoryId = Category.categoryId order by articleId DESC;";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleName","year","date","address","total","categoryName"],
+        config:["articleId","articleName","year","date","address","categoryName"],
     });
     mysql.Query();
 };
@@ -22,7 +19,16 @@ exports.Category = function(request,response){
     });
     mysql.Query();
 };
-
+//查询评论数
+exports.Comment = function(request,response){
+    var query = "select articleId,count(CommentId) as total from Comment group by articleId";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["articleId","total"]
+    });
+    mysql.Query();
+};
 exports.Update = function(request,response){
     var param = request.query;
     var query = "update user set name=? where id=?";
@@ -36,15 +42,12 @@ exports.Update = function(request,response){
 //根据CategoryId 查询文章
 exports.QueryCategory = function(request,response){
     var param = request.query;
-    var query = "select articleName,year,Article.date,address,categoryName,count(commentId) As total " +
-        "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
-        "and Article.articleId = Comment.articleId and Category.categoryId=?";
 
- //   var query = "select * from Article,Category,Comment where Article.categoryId=Category.categoryId and Article.articleId=Comment.articleId and Category.categoryId=?";
+    var query = "select * from Article,Category where Article.categoryId=Category.categoryId and Category.categoryId=? order by articleId DESC;";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleName","year","date","address","category","categoryName","total"],
+        config:["articleId","articleName","year","date","address","category","categoryName"],
         param:[param.categoryId]
     });
     mysql.Query();
@@ -73,18 +76,6 @@ exports.SubmitMessage = function(request,response){
     });
     mysql.Add();
 };
-//
-exports.ArticleContent = function(request,response){
-    var param = request.query;
-    var query = "select articleName,date,address,categoryName from Article,Category where Article.categoryId = Category.categoryId and articleId=?";
-    var mysql = new Mysql.createMysql({
-        query:query,
-        response:response,
-        config:["articleName","date","content","categoryName"],
-        param:[param.articleId],
-    });
-    mysql.Query();
-};
 
 //根据articleId查询评论
 exports.QueryComment = function(request,response){
@@ -109,6 +100,17 @@ exports.SubmitComment = function(request,response){
         query:query,
         response:response,
         param:[param.userName,"/img/12.jpg",param.messageContent,time,param.articleId],
+    });
+    mysql.Add();
+};
+//添加文章
+exports.addArticle = function(request,response){
+    var param = request.query;
+    var query = "insert into Article(articleName,year,address,date,categoryId) values(?,?,?,?,?);";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.articleName,param.year,param.address,param.date,param.categoryId],
     });
     mysql.Add();
 };

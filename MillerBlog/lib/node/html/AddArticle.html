@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文章</title>
+    <link type = "text/css" rel="stylesheet" href="/css/base/base.css">
+    <script src = "/js/common/jquery-1.7.js" type = "text/javascript"></script>
+</head>
+<body>
+    <div class ="content" style = "margin-left:200px;">
+        <label for="name">文章名：</label>
+        <input type="text" class = "form-control" id = "name" style = "width:300px;height:22px;">
+        <label for="name">地址：</label>
+        <input type="text" class = "form-control" id = "address" style = "width:300px;height:22px;">
+        <label for="name">分类：</label>
+        <select name="category" id="category" style = "width:150px;height:22px;">
+        </select>
+
+        <button id = "btn">提交</button>
+
+    </div>
+    <script>
+        $(function(){
+            $.getJSON(
+                    "/Category",
+                    function(data){
+                        var rows = data.result;
+                        var total = data.total;
+                        var html = "";
+                        for(var i = 0;i<total;i++){
+                            html += "<option id='"+rows[i].categoryId+"'>"+rows[i].categoryName+"</option>"
+                        }
+                        $("#category").append(html);
+                    }
+
+            )
+
+            $("#btn").click(function(){
+                var date = new Date();
+                var year = date.getFullYear();
+                var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+                var name = $("#name").val();
+                var address = $("#address").val();
+                var categroy = $("#category option:selected").attr("id");
+                categroy = parseInt(categroy);
+
+                console.log(categroy)
+                $.getJSON(
+                        "/appendArticle",
+                        {
+                            "date":time,
+                            "year":year,
+                            "articleName":name,
+                            "address":address,
+                            "categoryId":categroy
+                        },
+                        function(data){
+                            if(data == "1"){
+                                alert("添加成功！");
+                            }
+                        }
+                )
+            });
+        });
+    </script>
+</body>
+</html>

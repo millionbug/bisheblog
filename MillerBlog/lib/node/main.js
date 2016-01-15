@@ -25,6 +25,9 @@ app.get("/CategoryDetail",function(request,response){
 app.get("/message",function(request,response){
     response.sendFile(__dirname+"/html/message.html");
 });
+app.get("/addArticle",function(request,response){
+    response.sendFile(__dirname+"/html/AddArticle.html");
+});
 
 //博客地址
 app.get("/create_blog",function(request,response){
@@ -34,12 +37,13 @@ app.get("/create_blog",function(request,response){
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
+app.get("/Comment",Router.Comment);
 app.get("/QueryCategory",Router.QueryCategory);
 app.get("/QueryMessage",Router.QueryMessage);
 app.get("/SubmitMessage",Router.SubmitMessage);
-app.get("/ArticleContent",Router.ArticleContent);
 app.get("/QueryComment",Router.QueryComment);
 app.get("/SubmitComment",Router.SubmitComment);
+app.get("/appendArticle",Router.addArticle);
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

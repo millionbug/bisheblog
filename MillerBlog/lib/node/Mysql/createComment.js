@@ -11,9 +11,9 @@ client.query("use blog");
 //createMessage();
 //client.query("truncate table Comment");
 //for(var i = 0;i<7;i++) {
-  //  addData();
+    addData();
 //}
-showData();
+//showData();
 function createMessage(){
     var query = "create table Comment(";
         query += "commentId int(11) NOT NULL AUTO_INCREMENT,";
@@ -31,7 +31,7 @@ function createMessage(){
 function addData(){
     var date = new Date();
     var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-    var query = "insert into Comment(userName,image,content,date,articleId) values('小浩学长','/img/11.jpg','恭喜小浩学长建站成功。','"+time+"',6)";
+    var query = "insert into Comment(userName,image,content,date,articleId) values('小浩学长','/img/11.jpg','恭喜小浩学长建站成功。','"+time+"',9)";
     client.query(query);
 }
 function showData(){
@@ -39,7 +39,11 @@ function showData(){
         "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
         "and Article.articleId = Comment.articleId;"
 
-  //  var query = "select articleName,count(commentId) As total from Article,Comment where Article.articleId = Comment.articleId and Comment.articleId=6";
+    var query = "select articleName,count(commentId) As total from Article,Comment where Article.articleId = Comment.articleId and Comment.articleId=6";
+
+    var query = "select * from Article,Category,Comment where " +
+        "Article.categoryId = Category.categoryId and Article.articleId = Comment.articleId " +
+        "group by articleName";
     client.query(query,function(err,result){
         if(err)
             console.log(err);

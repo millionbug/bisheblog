@@ -46,7 +46,7 @@ $(function(){
                     if(data != "1"){
                         return;
                     }
-                    location.reload();
+                    //location.reload();
                 }
             );
         });

@@ -1,6 +1,7 @@
 $(function(){
     init();
     AddCategory();
+    AddComment();
     function init(){
         $.getJSON(
             "/Query",
@@ -8,7 +9,6 @@ $(function(){
                 if(!data.result)
                     return;
                 var rows = data.result;
-                console.log(rows[0])
                 var yearTotal = setYear();
                 setMain();
 
@@ -33,13 +33,13 @@ $(function(){
                     for(var i = 0,len1 = rows.length;i<len1;i++){
                         for(var j= 0,len2 = yearTotal.length;j<len2;j++){
                             if(rows[i].year == yearTotal[j]){
-                                var html = "<h5>";
+                                var html = "<h5 id = '"+rows[i].articleId+"'>";
                                 html += "<p class ='rect'></p>";
                                 html += "<span class = 'articleTime'>"+rows[i].date+"</span>";
                                 html += "<span class = 'articleHao'>»</span>"
-                                html += "<a href = '"+rows[i].address+"' class = 'article'>"+rows[i].articleName+"</a>";
+                                html += "<a href = '"+rows[i].address+"#"+rows[i].articleId+"' class = 'article'>"+rows[i].articleName+"</a>";
                                 html += "<span class = 'category'>标签:"+rows[i].categoryName+"</span>"
-                                html += "<span class = 'category'>"+rows[i].total+"条评论</span>"
+                                html += "<span class = 'category' id='EveComment'>暂无评论</span>"
                                 html += "</h5>";
                                 $("#"+yearTotal[j]).append(html)
                             }
@@ -67,6 +67,22 @@ $(function(){
                 html+="</ul>";
                 $(".blog_category").append(html);
             }
+        )
+    }
+    function AddComment(){
+        $.getJSON(
+            "/Comment",
+            function(data){
+                if(!data)
+                    return;
+
+                var rows = data.result,
+                    total = data.total;
+                for(var i = 0;i<total;i++){
+                    $("#"+rows[i].articleId).find("#EveComment").html(rows[i].total+"条数据")
+                }
+            }
+
         )
     }
 });
