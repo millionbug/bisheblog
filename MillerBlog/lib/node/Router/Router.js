@@ -36,11 +36,15 @@ exports.Update = function(request,response){
 //根据CategoryId 查询文章
 exports.QueryCategory = function(request,response){
     var param = request.query;
-    var query = "select * from Article,Category where Article.categoryId=Category.categoryId and Category.categoryId=?";
+    var query = "select articleName,year,Article.date,address,categoryName,count(commentId) As total " +
+        "from Article,Category,Comment where Article.categoryId=Category.categoryId " +
+        "and Article.articleId = Comment.articleId and Category.categoryId=?";
+
+ //   var query = "select * from Article,Category,Comment where Article.categoryId=Category.categoryId and Article.articleId=Comment.articleId and Category.categoryId=?";
     var mysql = new Mysql.createMysql({
         query:query,
         response:response,
-        config:["articleId","articleName","year","date","address","category","categoryName"],
+        config:["articleName","year","date","address","category","categoryName","total"],
         param:[param.categoryId]
     });
     mysql.Query();
@@ -85,7 +89,6 @@ exports.ArticleContent = function(request,response){
 //根据articleId查询评论
 exports.QueryComment = function(request,response){
     var param = request.query;
-    console.log(param.articleId)
     var query = "select userName,image,content,DATE_FORMAT(date,'%Y年%m月%d日 %H:%i:%s') As date from Comment where articleId=?";
     var mysql = new Mysql.createMysql({
         query:query,

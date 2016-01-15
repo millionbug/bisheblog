@@ -6,16 +6,18 @@
     <link type="text/css" rel="stylesheet" href="/css/blog/blogDetail.css">
 </head>
 <body>
-<div class = "nav">
-    <p class = "rect"></p>
-    <ul>
-        <li><a href="/">首页</a></li>
-        <li><a href="/blog">博客</a></li>
-        <li><a href="/aboutMe">关于我</a></li>
-        <li><a href="/about">关于师傅</a></li>
-        <li><a href="/">评论</a></li>
-    </ul>
-</div>
+    <div class = "nav">
+        <p class = "rect"></p>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/blog">博客</a></li>
+            <li><a href="/message">留言</a></li>
+            <li><a href="/aboutMe">关于我</a></li>
+            <li><a href="/about">关于师傅</a></li>
+            <li><a id = "scroll_comment">评论</a></li>
+        </ul>
+    </div>
+    <p id="back-to-top"><img src="/img/13.png" alt=""></p>
     <div class = "content">
         <img src="/img/11.jpg" alt="头像" class = "head">
         <div class = "miller">
@@ -72,7 +74,7 @@
             </a>
             </a>
         </div>
-        <div class = "message">
+        <div class = "message" id = "Message">
             <img src="/img/11.jpg" alt="头像" class = "head2">
             <input type="text" placeholder="客官名" class = "form-control" name = "userName" id = "userName">
             <textarea type="text" placeholder="和小浩学长聊聊天～" class = "form-control" name="messageContent" id="messageContent"></textarea>
