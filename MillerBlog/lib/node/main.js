@@ -33,7 +33,9 @@ app.get("/addArticle",function(request,response){
 app.get("/create_blog",function(request,response){
     response.sendFile(__dirname+"/blog/2015Summary.html");
 });
-
+app.get("/mysql_node",function(request,response){
+    response.sendFile(__dirname+"/blog/mysql_node.html");
+});
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);

@@ -15,6 +15,8 @@ $(function(){
 
                 var rows = data.result;
                 var total = data.total;
+                if(!total)
+                    total = 0;
                 $(".comment_mysql").html(total+"条评论");
                 var html = "";
                 for(var i = 0;i<total;i++){
