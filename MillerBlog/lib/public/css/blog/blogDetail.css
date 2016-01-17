@@ -226,5 +226,7 @@ p#back-to-top {
   background-color: #f8f8f8; }
   .code div {
     line-height: 23px; }
+  .code pre {
+    margin-left: -130px; }
 
 /*# sourceMappingURL=blogDetail.css.map */

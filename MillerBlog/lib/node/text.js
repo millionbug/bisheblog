@@ -1,13 +1,15 @@
 var express = require("express");
 var app = express();
-var Mysql = require("./Mysql/Mysql");
+var Mysql = require("./Mysql/Mysql2");
 
 app.get("/Query",function(request,response){
-    var query = "select * from Article";
+    var query = "select * from Article where articleId=?";
+    var param = request.query;
     var mysql = new Mysql.createMysql({
         database:"blog",
         response:response,
         query:query,
+        param:[param.articleId],
         config:["articleId","articleName","date","categoryId"]
     });
     mysql.Query();

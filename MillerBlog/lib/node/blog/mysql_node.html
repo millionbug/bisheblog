@@ -35,86 +35,82 @@
             <p>因为大部分的查询需要返回数据，所以根据数据库表中字段设置相同的字段，下面会介绍，而修改、删除、增加数据都只需要返回是否成功，所以会返回0/1作为判断。</p>
             <h3>调用方式</h3>
             <p>首先创建一个Js文件main.js，我使用的是Node Express web框架，这样在处理前端静态资源和get/post请求时非常轻松，以后有兴趣可以自己写一个web框架。</p>
+            <p>创建数据库Article，字段articleId，articleName，date。然后我们会查询articleId和articleName。</p>
             <div class = "code">
-                <div>var express = require("express");</div>
-                <div>var app = express();</div>
-                <div>var mysql = require("mysql");</div>
-                <div>app.get("/Query",function(request,response){</div>
-                <div>var query = "select * from Article";  //sql代码</div>
-                <div>var mysql = new Mysql.createMysql({</div>
-                <div>database:"blog", //数据库名</div>
-                <div>response:response,</div>
-                <div>query:query,</div>
-                <div>config:["articleId","articleName","date","categoryId"]   //需要向前端传送的数据库字段名</div>
-                <div>});</div>
-                <div>mysql.Query();</div>
-                <div>});</div>
+                <div class="cnblogs_Highlighter">
+                    <pre class="brush:javascript;gutter:true;">
+                        var express = require("express");
+                        var app = express();
+                        var Mysql = require("./Mysql/Mysql2");
 
-                <div>var server = app.listen(9090,function(){</div>
-                <div>var host = server.address().address;</div>
-                <div>var port = server.address().port;</div>
-                <div>console.log("应用实例，访问地址为 http://%s:%s", host, port)</div>
-                <div>});</div>
+                        app.get("/Query",function(request,response){
+                        var query = "select * from Article";
+                        var mysql = new Mysql.createMysql({
+                        database:"blog",             //设置数据库名
+                        response:response,
+                        query:query,
+                        config:["articleId","articleName"]   //配置需要显示在前端的字段
+                        });
+                        mysql.Query();
+                        });
+
+                        var server = app.listen(9090,function(){
+                        var host = server.address().address;
+                        var port = server.address().port;
+                        console.log("应用实例，访问地址为 http://%s:%s", host, port)
+                        });
+                    </pre>
+                </div>
             </div>
             <P>当我们启动了服务器之后，在页面上输入http://localhost:9090/Query，就可以得到我们需要的数据。</P>
             <div class = "code">
                 <div>{"total":3,"result":[{"articleId":6,"articleName":"2015总结","date":"2016-1-14","categoryId":9},{"articleId":8,"articleName":"数据库","date":"2016-1-15","categoryId":6},{"articleId":9,"articleName":"linux基础","date":"2016-1-15","categoryId":6}]}</div>
                 <div>total:查询出的数据总量。</div>
                 <div>result:数组中包括很多条数据，一般遍历数组进行操作。</div>
-                <div class="cnblogs_code">
-<pre><span style="color: #008000;">/*</span><span style="color: #008000;">*
- * author yh
- * @param imgCount 图片数组 必须有id和src
- * @param callback 回调函数
- * @returns 每个精灵的canvas和context
- </span><span style="color: #008000;">*/</span>
-<span style="color: #0000ff;">function</span><span style="color: #000000;"> getImg(imgCount,callback){
-    </span><span style="color: #0000ff;">var</span> total =<span style="color: #000000;"> imgCount.length,
-        load </span>= 0<span style="color: #000000;">,
-        img </span>=<span style="color: #000000;"> {},
-        w </span>= 0<span style="color: #000000;">,
-        h </span>= 0<span style="color: #000000;">;
-
-    </span><span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> i = 0;i &lt; total;i++<span style="color: #000000;">){
-        </span><span style="color: #0000ff;">var</span> id =<span style="color: #000000;"> imgCount[i].id;
-        </span><span style="color: #0000ff;">var</span> imgs = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Image();
-        imgs.src </span>=<span style="color: #000000;"> imgCount[i].src;
-
-        </span><span style="color: #008000;">//</span><span style="color: #008000;">设置canvas的width和height</span>
-        <span style="color: #0000ff;">if</span>(imgCount[i].width &amp;&amp;<span style="color: #000000;"> imgCount[i].height){
-            w </span>=<span style="color: #000000;"> imgCount[i].width;
-            h </span>=<span style="color: #000000;"> imgCount[i].height;
-        }</span><span style="color: #0000ff;">else</span><span style="color: #000000;">{
-            w </span>=<span style="color: #000000;"> imgs.width;
-            h </span>=<span style="color: #000000;"> imgs.height;
-        }
-
-        img[</span>"cvs"+id] = document.createElement("canvas"<span style="color: #000000;">);
-        img[</span>"cvs"+id].width =<span style="color: #000000;"> w;
-        img[</span>"cvs"+id].height =<span style="color: #000000;"> h;
-        img[</span>"ct"+id] = img["cvs"+id].getContext("2d"<span style="color: #000000;">);
-        img[</span>"ct"+id].drawImage(imgs,0,0,imgs.width,imgs.height,0,0<span style="color: #000000;">,w,h);</span><span style="color: #000000;">
-
-        imgs.onload </span>= <span style="color: #0000ff;">function</span><span style="color: #000000;">(){
-            load</span>++<span style="color: #000000;">;<br />　　　　　　　delete imgs;<br />　　　　　　　imgs = undefined;<br />
-        };
-    };
-
-    </span><span style="color: #0000ff;">if</span>(<span style="color: #0000ff;">typeof</span> callback == "function"<span style="color: #000000;">){
-        </span><span style="color: #0000ff;">var</span> me = <span style="color: #0000ff;">this</span><span style="color: #000000;">;
-        </span><span style="color: #0000ff;">function</span><span style="color: #000000;"> check(){
-            </span><span style="color: #0000ff;">if</span>(load &gt;=<span style="color: #000000;"> total)
-                callback.call(me,arguments);
-            </span><span style="color: #0000ff;">else</span><span style="color: #000000;">
-                setTimeout(check,</span>300<span style="color: #000000;">);
-        }
-        check();
-    };
-    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> img;
-}</span></pre>
-                </div>
             </div>
             <p>上面是没有参数的查询，也就是不需要传递参数，当然，我封装的Mysql是可以传递参数的，下面是整个从页面传递参数到取出数据的过程。</p>
+            <p>例如例子中，我需要根据Id查询出articleId=6时articleName时，需要从前端取到Id值，然后根据$.getJSON("/Query",{articleId:6},function(data){console.log(data)});发送ajax请求。</p>
+            <p>上面是没有参数的查询，也就是不需要传递参数，当然，我封装的Mysql是可以传递参数的，下面是整个从页面传递参数到取出数据的过程。</p>
+           <div class = "code">
+               <div class="cnblogs_Highlighter">
+                   <pre class="brush:javascript;gutter:true;">
+                       var express = require("express");
+                       var app = express();
+                       var Mysql = require("./Mysql/Mysql2");
+
+                       app.get("/Query",function(request,response){
+                       var query = "select * from Article where articleId=?";
+                       var param = request.query;
+                       var mysql = new Mysql.createMysql({
+                       database:"blog",
+                       response:response,
+                       query:query,
+                       param:[param.articleId],    //配置参数
+                       config:["articleId","articleName","date","categoryId"]
+                       });
+                       mysql.Query();
+                       });
+
+                       var server = app.listen(9090,function(){
+                       var host = server.address().address;
+                       var port = server.address().port;
+                       console.log("应用实例，访问地址为 http://%s:%s", host, port)
+                       });
+                   </pre>
+               </div>
+           </div>
+            <p>就这样可以取到数据。</p>
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:javascript;gutter:true;">
+                    {"total":1,"result":[{"articleId":6,"articleName":"2015总结","date":"2016-1-14","categoryId":9}]}</pre>
+            </div>
+            <h3>总结</h3>
+            <p>在学习技术的过程中，越发觉得代码就是要为我们带来方便，
+                我们不想写重复的代码，那就把它封装起来吧，有很多人在问要不要重复造轮子的问题，我觉得这个问题因人而异，
+                我个人非常喜欢造轮子，如果是简单的东西，都自己封装，如果是要用大的框架，就去学习别人的框架，看
+                看别人的源码，我曾经承诺过不许别人说我Jquery基础差，以后一定会去研究它的源码，不过目前优先
+                级不高，当我水平达到一个层次后，自然会想突破自己，就会去看别人的框架源码提升框架水平，现在
+                还是打好基础，认真走好每一步，这样才能茁壮成长。</p>
         </div>
          <div class = "ps_relative">
             <a href="" class ="pre">
