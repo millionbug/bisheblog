@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章：NodeJs对Mysql封装</title>
+    <link type="text/css" rel="stylesheet" href="/css/blog/blogDetail.css">
+</head>
+<body>
+    <div class = "nav">
+        <p class = "rect"></p>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/blog">博客</a></li>
+            <li><a href="/message">留言</a></li>
+            <li><a href="/aboutMe">关于我</a></li>
+            <li><a href="/about">关于师傅</a></li>
+            <li><a id = "scroll_comment">评论</a></li>
+        </ul>
+    </div>
+    <p id="back-to-top"><img src="/img/13.png" alt=""></p>
+    <div class = "content">
+        <img src="/img/11.jpg" alt="头像" class = "head">
+        <div class = "miller">
+            <div class = "articleName">NodeJs对Mysql封装</div>
+            <span class = "author">作者:<a href = "/aboutMe">小浩学长</a></span>
+            <span class = "time">时间:2016年1月18日</span>
+            <span class = "category">分类:<a href = "/CategoryDetail#6">Linux</a></span>
+            <span class = "comment">评论数:<span class = 'comment_mysql'></span></span>
+        </div>
+
+        <div class = "article_content">
+            <p>记录一下linux下安装nginx的所需要的配置。</p>
+            <p>首先从&nbsp;<a href="http://nginx.org/en/download.html">nginx官网</a>&nbsp;下载所需要的版本，复制链接，执行</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    wget http://nginx.org/download/nginx-1.8.0.tar.gz
+                </pre>
+            </div>
+            </div>
+            <p>　在你的linux目录下会有nginx-1.8.0.tar.gz压缩包，解压到当前目录。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    tar -zxvf nginx-1.8.0.tar.gz
+                    cd nginx-1.8.0／
+                    ./configure
+                </pre>
+            </div>
+            </div>
+            <p>　　这个时候一般会出现错误，我们需要安装nginx所依赖的包</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    sudo apt-get install gcc   g++    make   automake   python perl
+                </pre>
+            </div>
+                </div>
+            <p>　　一般这个时候只是./configure的时候还会出现错误</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    ./configure: error: the HTTP rewrite module requires the PCRE library.
+                    You can either disable the module by using --without-http_rewrite_module
+                    option, or install the PCRE library into the system, or build the PCRE library
+                    statically from the source with nginx by using --with-pcre=&lt;path&gt; option.
+                </pre>
+            </div>
+                </div>
+            <p>这个时候我们需要安装PCRE所需要的包。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    sudo apt-get update
+                    sudo apt-get install libpcre3 libpcre3-dev
+                    sudo apt-get install openssl libssl-dev
+                </pre>
+            </div>
+                </div>
+            <p>　　现在执行./configure就成功了。</p>
+            <p>　　最后，我们进行编译和安装。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    sudo make
+                    sudo make install
+                </pre>
+            </div>
+            </div>
+            <p>　　ok,安装结束。</p>
+            <p>　　安装完成以后，你可以输入命令启动服务器。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    sudo /usr/local/nginx/sbin/nginx
+                </pre>
+            </div>
+                </div>
+            <p>　　这样，你就可以在网页输入localhost访问到web服务器。</p>
+            <p>　　你可以更改 /usr/local/nginx/html/index.html中的内容。如果想要关闭nginx.直接输入命令</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    pkill nginx
+                </pre>
+            </div>
+                </div>
+            <p>　　为了方便管理，我们可以写成shell脚本loadNginx.sh(自己取的文件名)来开关nginx。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    #!/bin/bash
+                    if [ "$1" == "start" ];then
+                    sudo /usr/local/nginx/sbin/nginx
+                    echo "start..."
+                    elif [ "$1" == "stop" ];then
+                    sudo pkill nginx
+                    echo "stop..."
+                    fi
+                </pre>
+            </div>
+                </div>
+            <p>　　通过 bash loadNginx.sh start来开启nginx，bash loadNginx.sh stop 关闭。</p>
+            <p>　　也可以修改nginx的端口。</p>
+            <div class = "code">
+            <div class="cnblogs_Highlighter">
+                <pre class="brush:csharp;gutter:true;">
+                    vim /usr/local/nginx/conf/nginx.conf
+                </pre>
+            </div>
+                </div>
+            <p>　　找到80端口，修改成8080（这是我自己选取的）。</p>
+            <p>　　</p>
+        </div>
+         <div class = "ps_relative">
+            <a href="" class ="pre">
+                <b>上一篇:</b>
+                <b></b>
+            </a>
+             <a href="/mysql_node#7" class = "next">
+                <b>下一篇:</b>
+                <b>NodeJs对Mysql封装</b>
+             </a>
+        </div>
+
+        <div class = "message" id = "Message">
+            <img src="/img/11.jpg" alt="头像" class = "head2">
+            <input type="text" placeholder="客官名" class = "form-control" name = "userName" id = "userName">
+            <textarea type="text" placeholder="和小浩学长聊聊天～" class = "form-control" name="messageContent" id="messageContent"></textarea>
+            <button id = "btn"><a>提交留言</a></button>
+            <span>*想回复，请大胆@他，本人技术不支持回复。^_^</span>
+            <hr>
+        </div>
+        <div class = "foot"></div>
+    </div>
+    <script src = "/js/common/jquery-1.7.js" type = "text/javascript"></script>
+    <script src = "/js/blog/blogDetail.js" type = "text/javascript"></script>
+</body>
+</html>

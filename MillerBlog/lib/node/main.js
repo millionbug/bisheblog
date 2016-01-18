@@ -36,6 +36,10 @@ app.get("/create_blog",function(request,response){
 app.get("/mysql_node",function(request,response){
     response.sendFile(__dirname+"/blog/mysql_node.html");
 });
+app.get("/nginx_linux",function(request,response){
+    response.sendFile(__dirname+"/blog/nginx_linux.html");
+});
+
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
