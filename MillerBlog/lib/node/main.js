@@ -31,13 +31,13 @@ app.get("/addArticle",function(request,response){
 
 //博客地址
 app.get("/create_blog",function(request,response){
-    response.sendFile(__dirname+"/blog/2015Summary.html");
+    response.sendFile(__dirname+"/blog/62015Summary.html");
 });
 app.get("/mysql_node",function(request,response){
-    response.sendFile(__dirname+"/blog/mysql_node.html");
+    response.sendFile(__dirname+"/blog/7mysql_node.html");
 });
 app.get("/nginx_linux",function(request,response){
-    response.sendFile(__dirname+"/blog/nginx_linux.html");
+    response.sendFile(__dirname+"/blog/8nginx_linux.html");
 });
 
 app.get("/Query",Router.Query);

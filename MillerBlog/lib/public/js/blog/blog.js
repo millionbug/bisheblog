@@ -1,9 +1,11 @@
 $(function(){
     init();
-    AddCategory();
-    setTimeout(function(){
-        AddComment();
-    },50);
+    var back = $.Callbacks();
+    back.add(AddCategory);
+    back.fire();
+
+    back.add(AddComment);
+    back.fire();
     function init(){
         $.getJSON(
             "/Query",
