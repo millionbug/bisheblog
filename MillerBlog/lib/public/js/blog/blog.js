@@ -1,11 +1,14 @@
 $(function(){
-    init();
     var back = $.Callbacks();
+    back.add(init);
     back.add(AddCategory);
-    back.fire();
-
     back.add(AddComment);
     back.fire();
+
+    /*var def = $.Deferred();
+    def.then(AddCategory).done(function(){
+        AddComment();
+    });*/
     function init(){
         $.getJSON(
             "/Query",
@@ -54,6 +57,7 @@ $(function(){
 
             }
         )
+        console.log(1)
     }
 
     function AddCategory(){
@@ -63,7 +67,6 @@ $(function(){
                 if(!data.result)
                     return;
                 var rows = data.result;
-                console.log(data.total)
                 var html  = "<ul>";
                 for(var i = 0,len = rows.length;i<len;i++){
                         html += "<li><a href = '/CategoryDetail#" + rows[i].categoryId + "'>" + rows[i].categoryName + "</a></li>";
@@ -74,6 +77,8 @@ $(function(){
         )
     }
     function AddComment(){
+
+        console.log(2)
         $.getJSON(
             "/Comment",
             function(data){
