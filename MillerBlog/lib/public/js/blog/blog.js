@@ -1,15 +1,12 @@
 $(function(){
-    var back = $.Callbacks();
-    back.add(init);
-    back.add(AddCategory);
-    back.add(AddComment);
-    back.fire();
+    AddCategory();
+    $.when(init())
+        .done(function(){
+           AddComment();
+        });
 
-    /*var def = $.Deferred();
-    def.then(AddCategory).done(function(){
-        AddComment();
-    });*/
     function init(){
+        var def = $.Deferred();
         $.getJSON(
             "/Query",
             function (data) {
@@ -53,11 +50,10 @@ $(function(){
                         }
                     }
                 }
-
-
+                def.resolve()
             }
         )
-        console.log(1)
+        return def;
     }
 
     function AddCategory(){
@@ -78,7 +74,6 @@ $(function(){
     }
     function AddComment(){
 
-        console.log(2)
         $.getJSON(
             "/Comment",
             function(data){
