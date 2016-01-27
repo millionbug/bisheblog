@@ -1,10 +1,10 @@
 $(function(){
-
-    init();
-    setTimeout(function(){
-        AddComment();
-    },50);
+    $.when(init())
+        .done(function(){
+            AddComment();
+        });
     function init(){
+        var def = $.Deferred();
         var cateId = location.hash.substring(1);
         $.getJSON(
             "/QueryCategory",
@@ -56,9 +56,10 @@ $(function(){
                     }
                 }
 
-
+                def.resolve();
             }
         )
+        return def;
     }
     function AddComment(){
         $.getJSON(
