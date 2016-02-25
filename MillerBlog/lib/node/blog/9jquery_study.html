@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章：NodeJs对Mysql封装</title>
+    <link type="text/css" rel="stylesheet" href="/css/blog/blogDetail.css">
+</head>
+<body>
+<div class = "nav">
+    <p class = "rect"></p>
+    <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/blog">博客</a></li>
+        <li><a href="/message">留言</a></li>
+        <li><a href="/aboutMe">关于我</a></li>
+        <li><a href="/about">关于师傅</a></li>
+        <li><a id = "scroll_comment">评论</a></li>
+    </ul>
+</div>
+<p id="back-to-top"><img src="/img/13.png" alt=""></p>
+<div class = "content">
+    <img src="/img/11.jpg" alt="头像" class = "head">
+    <div class = "miller">
+        <div class = "articleName">jQuery源码学习感想</div>
+        <span class = "author">作者:<a href = "/aboutMe">小浩学长</a></span>
+        <span class = "time">时间:2016年2月25日</span>
+        <span class = "category">分类:<a href = "/CategoryDetail#7">JavaScript</a></span>
+        <span class = "comment">评论数:<span class = 'comment_mysql'></span></span>
+    </div>
+
+    <div class = "article_content">
+        <p>　　还记得去年（2015）九月份的时候，作为一个大四的学生去参加美团霸面，结果被美团技术总监教育了一番，那次问了我很多jQuery源码的知识点，以前虽然喜欢研究框架，但水平还不足够来研究jQuery源码，那时我不明白他们为何要求那么高，现在才知道，原来没那么高，他问的都是jQuery最基本的框架架构，不过对于不知道的来说，再简单我也是不知道，那时写了一篇博文去吐槽了一下，那时候也是我自己真正激发自己的时候，那时候我说我一定要搞好自己的jQuery基础，没想到那么快就实现了，一个月的源码学习时间就结束了，不得不感叹自己以前知道的太少了。</p>
+        <p>　　在这次源码学习期间，在慕课网上学习Aaron老师的jQuery教程，感谢老师的总结让我很轻松的学习完了整个教程，这次学习没有写太多代码，主要是理解源码，然后自己执行或者修改后测试，搞完一个模块之后在自己的笔记本上记录这个方法的作用，然后把代码也写在笔记本上，旁边给代码进行标注，为之后来复习做好准备。大多数时候接触的都是难理解的知识，比如Promise规范的Deferred源码，Access方法，Ajax的Deferred实现，事件体系和选择器Sizzle引擎，都是看上去非常头痛的，不过还得静下心耐着性子慢慢研究，不懂就百度，这样补充了我很多知识盲点，学到很多有用的知识。这些是我自己的学习方法，如果大家觉得还行可以自己去试试。</p>
+        <p>　　jQuery作为目前非常流行的js框架，成功之处不仅在于框架设计，还修复了很多浏览器bug，思维严谨在代码间流露出。也让我深深跪服，不经感叹作者是多么牛的大神，作为一个框架研究基础，为我以后自己的框架也奠定了基础，以后我一定会有一个自己的框架，不需要有jQuery那么多功能，但能满足一个小公司开发用，这样就能随时有问题就能够修改。所以在师傅的教导之下，2016年需要提升框架内功，下面是师傅推荐读的技术书籍。</p>
+        <p>　　《冒号课堂：编程范式与OOP思想》 已读</p>
+        <p>　　《设计模式之禅》</p>
+        <p>　　《重构：改善既有代码的设计》</p>
+        <p>　　《代码整洁之道》</p>
+        <p>　　《软件架构设计》</p>
+        <p>　　《领域驱动设计》</p>
+        <p>　　《敏捷软件开发》</p>
+        <p>　　《测试驱动的JavaScript开发》</p>
+        <p>　　《Design by Contract 原则与实践》</p>
+        <p>　　今年还需要研究React框架，得尽快跟上时代的步伐，我的目标全端工程师。</p>
+        <p>　　在此，再次感谢师傅杨元超的教导，也欢迎大家去看看师傅的3D游戏引擎，<a href="https://github.com/yyc-git/Wonder.js">wonderJs。</a></p>
+    </div>
+    <div class = "ps_relative">
+        <a href="" class ="pre">
+            <b>上一篇:</b>
+            <b></b>
+        </a>
+        <a href="/nginx_linux#8" class = "next">
+            <b>下一篇:</b>
+            <b>NodeJs对Mysql封装</b>
+        </a>
+    </div>
+
+    <div class = "message" id = "Message">
+        <img src="/img/11.jpg" alt="头像" class = "head2">
+        <input type="text" placeholder="客官名" class = "form-control" name = "userName" id = "userName">
+        <textarea type="text" placeholder="和小浩学长聊聊天～" class = "form-control" name="messageContent" id="messageContent"></textarea>
+        <button id = "btn"><a>提交留言</a></button>
+        <span>*想回复，请大胆@他，本人技术不支持回复。^_^</span>
+        <hr>
+    </div>
+    <div class = "foot"></div>
+</div>
+<script src = "/js/common/jquery-1.7.js" type = "text/javascript"></script>
+<script src = "/js/blog/blogDetail.js" type = "text/javascript"></script>
+</body>
+</html>

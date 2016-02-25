@@ -1,6 +1,9 @@
 var Mysql = require("../Mysql/Mysql");
 //查询文章列表
 exports.Query = function(request,response){
+    var param = request.query;
+    var cb = param.callback;
+    cb+"("+"{result:'wefwef'}"+")";
     var query = "select * from Article,Category where Article.categoryId = Category.categoryId order by articleId DESC;";
     var mysql = new Mysql.createMysql({
         query:query,

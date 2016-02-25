@@ -34,7 +34,17 @@
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="9jquery_study.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/blog/9jquery_study.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.7918552">
+              <caret line="44" column="111" selection-start-line="44" selection-start-column="111" selection-end-line="44" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -50,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.3411515">
-              <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -81,10 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/index/index.css" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/index/index.scss" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/index.html" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/index/index.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/aboutMr.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/main/txt.json" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/examples/samples/animation/animation_morph.html" />
@@ -114,12 +130,10 @@
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/createMessage.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/createArticle.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/Mess.js" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/index.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/category/category.css" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/message/message.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/AddArticle.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/createComment.js" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/blog/blogDetail.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/Mysql2.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/text.js" />
@@ -128,10 +142,16 @@
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/nginx_linux.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/2015Summary.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/linux.html" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/main.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/7mysql_node.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/blog/blog.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/index.html" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/test.html" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/fuck.js" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/8nginx_linux.html" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/main.js" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/9jquery_study.html" />
       </list>
     </option>
   </component>
@@ -139,6 +159,13 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
@@ -171,7 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,14 +278,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -278,37 +297,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MillerBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MillerBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MillerBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="node" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,11 +322,41 @@
               <option name="myItemId" value="node" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Router" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MillerBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MillerBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MillerBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -851,12 +870,23 @@
       <workItem from="1453738379820" duration="599000" />
       <workItem from="1453824525653" duration="614000" />
       <workItem from="1453912287525" duration="8000" />
-      <workItem from="1453913399638" duration="541000" />
+      <workItem from="1453913399638" duration="601000" />
+      <workItem from="1453961057954" duration="636000" />
+      <workItem from="1454080411445" duration="33000" />
+      <workItem from="1454170585631" duration="16000" />
+      <workItem from="1454232458657" duration="713000" />
+      <workItem from="1454399737417" duration="615000" />
+      <workItem from="1454515601524" duration="15000" />
+      <workItem from="1455435483596" duration="169000" />
+      <workItem from="1455436228573" duration="162000" />
+      <workItem from="1455560584773" duration="1836000" />
+      <workItem from="1455563931845" duration="1658000" />
+      <workItem from="1456412757136" duration="1086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244317000" />
+    <option name="totallyTimeSpent" value="251316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,7 +910,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22874807" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19474497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20398407" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21912351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -941,27 +971,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="137" selection-start-line="45" selection-start-column="137" selection-end-line="45" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/blog/7mysql_node.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/css/blog/blogDetail.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1054,13 +1063,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/css/blog/blog.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/blogDetail.html">
@@ -1140,13 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14361702">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/css/index/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2606383">
@@ -1210,20 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Mysql/Mysql2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7605634">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="137" selection-start-line="45" selection-start-column="137" selection-end-line="45" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/text.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22183098">
@@ -1242,13 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.8872457">
           <caret line="207" column="10" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/blog/8nginx_linux.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.6913123">
-          <caret line="141" column="37" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1273,18 +1254,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/blog/blogDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4989339">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Mysql/Mysql2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.70016205">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.703704">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1297,10 +1292,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/category/category.js">
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3411515">
-          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/public/js/fuck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/blog/8nginx_linux.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45022625">
+          <caret line="100" column="15" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/blog/9jquery_study.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7918552">
+          <caret line="44" column="111" selection-start-line="44" selection-start-column="111" selection-end-line="44" selection-end-column="111" />
           <folding />
         </state>
       </provider>
