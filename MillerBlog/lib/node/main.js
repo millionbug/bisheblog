@@ -42,6 +42,9 @@ app.get("/nginx_linux",function(request,response){
 app.get("/jquery_study",function(request,response){
     response.sendFile(__dirname+"/blog/9jquery_study.html");
 });
+app.get("/react_style",function(request,response){
+    response.sendFile(__dirname+"/blog/10react_study.html");
+});
 app.get("/Query",Router.Query);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
