@@ -33,7 +33,6 @@
             var director = wd.Director.getInstance();
 
             director.scene.addChild(createSkybox());
-            director.scene.addChild(createSphere());
             director.scene.addChild(createCamera());
 
             director.start();
@@ -79,23 +78,6 @@
 
             return gameObject;
         }
-
-        function createSphere() {
-            var material = wd.BasicMaterial.create();
-            material.map = wd.LoaderManager.getInstance().get("texture");
-
-            var geometry = wd.SphereGeometry.create();
-            geometry.material = material;
-            geometry.radius = 5;
-
-            var gameObject = wd.GameObject.create();
-            gameObject.addComponent(geometry);
-
-            gameObject.addComponent(wd.MeshRenderer.create());
-
-            return gameObject;
-        }
-
 
         function createCamera() {
             var camera = wd.GameObject.create(),
