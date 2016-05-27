@@ -7,7 +7,7 @@ app.use(express.static('../public'));
 app.get('/',function(request,response){
     response.sendFile(__dirname+"/html/index.html");
 });
-app.get('/image',function(request,response){
+app.get('/img',function(request,response){
     response.sendFile(__dirname+"/html/image.html");
 });
 app.get("/aboutMe",function(request,response){

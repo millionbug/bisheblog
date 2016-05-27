@@ -1137,7 +1137,7 @@
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1153,20 +1153,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.333334">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.81447965">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/image.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30769232">
+            <state vertical-scroll-proportion="-36.666668">
               <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1251,14 +1251,14 @@
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/blog/10react_study.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/examples/samples/skybox/skybox.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/index/index.css" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/index.html" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/demo.css" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/css/custom.css" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Mysql/Mess.js" />
-        <option value="$PROJECT_DIR$/MillerBlog/lib/node/main.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/public/js/modernizr.custom.46884.js" />
         <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/image.html" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/main.js" />
+        <option value="$PROJECT_DIR$/MillerBlog/lib/node/html/index.html" />
       </list>
     </option>
   </component>
@@ -2068,12 +2068,12 @@
       <workItem from="1462540071556" duration="1552000" />
       <workItem from="1464162514232" duration="609000" />
       <workItem from="1464166372831" duration="645000" />
-      <workItem from="1464328708605" duration="3188000" />
+      <workItem from="1464328708605" duration="3671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268152000" />
+    <option name="totallyTimeSpent" value="268635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2471,26 +2471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.333334">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/Router/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -2515,11 +2499,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/image.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30769232">
+        <state vertical-scroll-proportion="-36.666668">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MillerBlog/lib/node/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81447965">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
