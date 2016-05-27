@@ -7,6 +7,9 @@ app.use(express.static('../public'));
 app.get('/',function(request,response){
     response.sendFile(__dirname+"/html/index.html");
 });
+app.get('/image',function(request,response){
+    response.sendFile(__dirname+"/html/image.html");
+});
 app.get("/aboutMe",function(request,response){
     response.sendFile(__dirname+"/html/aboutMe.html");
 });
@@ -46,6 +49,7 @@ app.get("/react_style",function(request,response){
     response.sendFile(__dirname+"/blog/10react_study.html");
 });
 app.get("/Query",Router.Query);
+app.get("/QueryImage",Router.QueryImage);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
 app.get("/Comment",Router.Comment);
@@ -56,7 +60,7 @@ app.get("/QueryComment",Router.QueryComment);
 app.get("/SubmitComment",Router.SubmitComment);
 app.get("/appendArticle",Router.addArticle);
 
-var server = app.listen(8080, function () {
+var server = app.listen(8090, function () {
     var host = server.address().address;
     var port = server.address().port;
 

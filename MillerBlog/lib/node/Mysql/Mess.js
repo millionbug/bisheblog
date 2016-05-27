@@ -5,15 +5,14 @@ var client = mysql.createConnection({
 });
 client.connect();
 
-//client.query("use blog");
+client.query("use blog");
 //client.query("drop table Mess");
-//createMessage();
-//for(var i = 0;i<3;i++) {
-  //  addData();
-//}
+for(var i = 1;i<=7;i++) {
+    addData(i);
+}
 //addData();
 showData();
-function createMessage(){
+/*function createMessage(){
     var query = "create table Mess(";
         query += "messageId int(11) NOT NULL AUTO_INCREMENT,";
         query += "userName varchar(30) NOT NULL,";
@@ -23,14 +22,21 @@ function createMessage(){
         query += "primary key (messageId)";
         query += ") ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;";
     client.query(query);
+};*/
+function createimage(){
+    var query = "create table Image(";
+    query += "imageId int(11) NOT NULL AUTO_INCREMENT,";
+    query += "path varchar(20),";
+    query += "primary key (imageId)";
+    query += ") ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;";
+    client.query(query);
 };
-
-function addData(){
-    var query = "insert into Mess(userName,image,content,date) values('小浩学长','/img/11.jpg','恭喜小浩学长建站成功。','NOW()')";
+function addData(i){
+    var query = "insert into Image(path) values('/img/"+i+".jpg')";
     client.query(query);
 }
 function showData(){
-    var query = "select * from ";
+    var query = "select * from Image";
     client.query(query,function(err,result){
         console.log(result)
     });

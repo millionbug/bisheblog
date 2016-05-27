@@ -9,6 +9,15 @@ exports.Query = function(request,response){
     });
     mysql.Query();
 };
+exports.QueryImage = function(request,response){
+    var query = "select * from Image";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        config:["imageId","path"],
+    });
+    mysql.Query();
+};
 //查询分类列表
 exports.Category = function(request,response){
     var query = "select * from Category";
