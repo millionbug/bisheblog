@@ -7,6 +7,7 @@ client.connect();
 
 client.query("use blog");
 //client.query("drop table Mess");
+createimage();
 for(var i = 1;i<=7;i++) {
     addData(i);
 }

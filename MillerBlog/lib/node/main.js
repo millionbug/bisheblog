@@ -1,11 +1,20 @@
 var express = require('express');
+var Mysql = require("./Mysql/Mysql");
 var Router = require("./Router/Router");
+var formidable = require("formidable");
+var fs = require("fs");
 var app = express();
 
 app.use(express.static('../public'));
 
 app.get('/',function(request,response){
     response.sendFile(__dirname+"/html/index.html");
+});
+app.get('/User',function(request,response){
+    response.sendFile(__dirname+"/html/User.html");
+});
+app.get('/admin',function(request,response){
+    response.sendFile(__dirname+"/html/admin.html");
 });
 app.get('/img',function(request,response){
     response.sendFile(__dirname+"/html/image.html");
@@ -50,6 +59,9 @@ app.get("/react_style",function(request,response){
 });
 app.get("/Query",Router.Query);
 app.get("/QueryImage",Router.QueryImage);
+app.get("/DelArticle",Router.DelArticle);
+app.get("/DelCategory",Router.DelCategory);
+app.get("/DelImage",Router.DelImage);
 app.get("/Update",Router.Update);
 app.get("/Category",Router.Category);
 app.get("/Comment",Router.Comment);
@@ -59,8 +71,26 @@ app.get("/SubmitMessage",Router.SubmitMessage);
 app.get("/QueryComment",Router.QueryComment);
 app.get("/SubmitComment",Router.SubmitComment);
 app.get("/appendArticle",Router.addArticle);
+app.get("/addCategory",Router.addCategory);
+app.post("/upload",function(request,response){
+    var form = new formidable.IncomingForm();
+    form.parse(request,function(error,fields,files){
+        fs.renameSync(files.upload.path,"/tmp/"+files.upload.name);
+        fs.createReadStream("/tmp/"+files.upload.name).pipe(fs.createWriteStream(__dirname+"/../public/img/"+files.upload.name));
+        var query = "insert into Image(path) values(?)";
+        var mysql = new Mysql.createMysql({
+            query:query,
+            response:response,
+            param:["/img/"+files.upload.name],
+            callback:function(){
+                response.sendFile(__dirname+"/html/User.html");
+            }
+        });
+        mysql.Add();
+    });
+});
 
-var server = app.listen(8080, function () {
+var server = app.listen(8090, function () {
     var host = server.address().address;
     var port = server.address().port;
 

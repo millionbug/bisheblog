@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">小浩学长</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="active" title="user"><a href="#">文章管理</a></li>
+         <li title="ke"><a href="#">类别管理</a></li>
+         <li title = "class"><a href="#">图片管理</a></li>
+      </ul>
+   </div>
+</nav>
+<div id = "user">
+    <div>
+        <button id = "add">添加文章</button>
+        <div class = "add" style = "display: none">
+            <label for="name">文章名：</label>
+            <input type="text" class = "form-control" id = "name" style = "width:300px;height:22px;">
+            <label for="name">地址：</label>
+            <input type="text" class = "form-control" id = "address" style = "width:300px;height:22px;">
+            <label for="name">分类：</label>
+            <select name="category" id="category" style = "width:150px;height:22px;">
+            </select>
+            <input type="button" id = "btn" value = "提交">
+            <input type="button" class = "clo" value = "关闭">
+        </div>
+    </div>
+   <table class="table">
+       <thead>
+       <tr>
+           <th>文章名</th>
+           <th>时间</th>
+           <th>地址</th>
+           <th>类别</th>
+           <th>操作</th>
+       </tr>
+       </thead>
+       <tbody class = "tB">
+       </tbody>
+   </table>
+</div>
+<div id = "ke" style="display: none">
+     <div>
+        <button id = "addKe">添加类别</button>
+        <div class = "add" style = "display: none">
+            <label for="name">类别名：</label><input type="text" id = 'cateName' name = "name">
+            <input type="button" id = "btnKe" value = "提交">
+            <input type="button" class = "clo" value = "关闭">
+        </div>
+    </div>
+   <table class="table">
+       <thead>
+       <tr>
+           <th>类别名</th>
+           <th>操作</th>
+       </tr>
+       </thead>
+       <tbody class = "tBKe">
+       </tbody>
+   </table>
+</div>
+<div id = "class" style = "display: none">
+     <div>
+        <button id = "addCl">上传图片</button>
+        <div class = "add" style = "display: none">
+            <form action="/upload" enctype="multipart/form-data" method="post">
+               <input type="file" name="upload" multiple="multiple"/>
+                <br>
+                <label for="name">图片路径：</label><input type="text" name = "imgName" multiple="multiple" >
+                <input type="submit" id = "btnCl" value = "提交">
+                <input type="button" class = "clo" value = "关闭">
+            </form>
+        </div>
+    </div>
+   <table class="table">
+       <thead>
+       <tr>
+           <th>图片路径</th>
+           <th>操作</th>
+       </tr>
+       </thead>
+       <tbody class = "tBCl">
+       </tbody>
+   </table>
+</div>
+<script type="text/javascript" src = "/js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src = "/js/admin/admin.js"></script>
+</body>
+</html>

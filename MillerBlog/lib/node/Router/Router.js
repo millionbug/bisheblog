@@ -18,6 +18,36 @@ exports.QueryImage = function(request,response){
     });
     mysql.Query();
 };
+exports.DelArticle = function(request,response){
+    var param = request.query;
+    var query = "delete from Article where articleId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.id],
+    });
+    mysql.Delete();
+};
+exports.DelCategory = function(request,response){
+    var param = request.query;
+    var query = "delete from Category where categoryId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.id],
+    });
+    mysql.Delete();
+};
+exports.DelImage = function(request,response){
+    var param = request.query;
+    var query = "delete from Image where imageId=?";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.id],
+    });
+    mysql.Delete();
+};
 //查询分类列表
 exports.Category = function(request,response){
     var query = "select * from Category";
@@ -120,6 +150,16 @@ exports.addArticle = function(request,response){
         query:query,
         response:response,
         param:[param.articleName,param.year,param.address,param.date,param.categoryId],
+    });
+    mysql.Add();
+};
+exports.addCategory = function(request,response){
+    var param = request.query;
+    var query = "insert into Category(categoryName) values(?)";
+    var mysql = new Mysql.createMysql({
+        query:query,
+        response:response,
+        param:[param.name],
     });
     mysql.Add();
 };

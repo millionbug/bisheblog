@@ -83,7 +83,11 @@ Mysql.prototype = {
         then(function (target) {
            return me.queryData(target);
         }).done(function (results) {
-            me.target.response.send("1");
+            if(me.target.callback){
+                me.target.callback.apply(this);
+            }else {
+                me.target.response.send("1");
+            }
         },console.error);
     },
     Delete:function(){
