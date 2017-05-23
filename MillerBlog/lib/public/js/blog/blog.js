@@ -15,7 +15,6 @@ $(function(){
                 var rows = data.result;
                 var yearTotal = setYear();
                 setMain();
-
                 function setYear() {
                     var years = {};
                     for (var i = 0; i < data.total; i++) {
@@ -27,7 +26,6 @@ $(function(){
                         html += "<div class = 'year' id = '"+yearTotal[j]+"'>" + yearTotal[j];
                         html += "<hr>";
                         html += "</div>";
-
                     }
                     html+="</div>";
                     $(".main").append(html);
@@ -79,7 +77,6 @@ $(function(){
             function(data){
                 if(!data)
                     return;
-
                 var rows = data.result,
                     total = data.total;
                 for(var i = 0;i<total;i++){

@@ -2,7 +2,6 @@ $(function(){
     var articleId = location.hash.substring(1);
     initComment();
     setButton();
-
     function initComment(){
         $.getJSON(
             "/QueryComment",

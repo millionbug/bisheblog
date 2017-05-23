@@ -29,7 +29,7 @@ function createMessage(){
 function addData(){
     var date = new Date();
     var time = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-    var query = "insert into Message(userName,image,content,date) values('小浩学长','/img/11.jpg','恭喜小浩学长建站成功。','"+time+"')";
+    var query = "insert into Message(userName,image,content,date) values('杨国栋同学','/img/11.jpg','恭喜杨国栋同学建站成功。','"+time+"')";
     client.query(query);
 }
 function showData(){

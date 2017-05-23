@@ -10,7 +10,7 @@ Mysql.prototype = {
     clientConnect:function(){
         this.client = this.mysql.createConnection({
             user:"root",
-            password:"asd"
+            password:"double"
         });
         this.client.connect();
     },
